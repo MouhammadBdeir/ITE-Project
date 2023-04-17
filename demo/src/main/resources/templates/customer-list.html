@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #BFBFBD;
+      color: #BF8211;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #01261C;
+      color: #BF8211;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <h1>Customer List</h1>
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Anrede</th>
+          <th>Company</th>
+          <th>Interest</th>
+          <th>Message</th>
+          <th>Phone Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="customer : ${customers}">
+          <td th:text="${customer.id}"></td>
+          <td th:text="${customer.email}"></td>
+          <td th:text="${customer.firstName}"></td>
+          <td th:text="${customer.lastName}"></td>
+          <td th:text="${customer.anrede}"></td>
+          <td th:text="${customer.company}"></td>
+          <td th:text="${customer.interest}"></td>
+          <td th:text="${customer.message}"></td>
+          <td th:text="${customer.phoneNumber}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h1>Feedback List</h1>
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-lg-8 mx-auto">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Subject</th>
+          <th>Message</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="feedback : ${feedbacks}">
+          <td th:text="${feedback.id}"></td>
+          <td th:text="${feedback.subject}"></td>
+          <td th:text="${feedback.message}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</html>
+
+

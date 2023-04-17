@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Dienstleistungen</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="/img/ITE-logo.jpeg" />
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/01.css">
+</head>
+<style>
+  body {
+    background-color: #BFBFBD; /* Replace with your desired color code */
+  }
+</style>
+<div th:replace="fragments/header.html::header"></div>
+<body style="margin-top:325px;">
+<style>
+  body {
+    background-color: #BFBFBD; /* Replace with your desired color code */
+  }
+</style>
+<div class="desktop-menu" th:replace="fragments/nav::nav"></div>
+<section class="pt-4" style="margin-top: 20px;">
+  <!-- Modal für das Feedback-Formular -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content myStyle">
+        <div class="modal-header">
+          <h5 class="modal-title" id="feedbackModalLabel" style="color: #BF8211;">Feedback geben</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/feedback-form" method="post">
+            <div class="form-group">
+              <label for="subject"  style="color: #BF8211;">Betreff</label>
+              <input type="text" class="form-control" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message"  style="color: #BF8211;">Nachricht</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn " style="margin-top: 10px; background-color: #BF8211;"><span style="color: #01261C;">Senden</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container px-lg-5" style="margin-top: 40px;">
+    <div class="row">
+      <h3 class="text-dunkelGold" style="margin-bottom: 20px" >Programmierung </h3>
+      <p class="schrifft">
+        Durch die jahrelange Erfahrung aus der Automobilindustrie, ist es uns möglich ihr System zu programmieren. Wir beherschen die Computer Sprachen in C, C++ und Python. Ein wichtiges Tool in der SPS, der Steuerbaren Programmierung des Systems Siemens logo, können wir ihnen nach Wunsch ihre Steuerung programmieren oder sogar optimieren.
+      </p>
+      <div class="col-8">
+        <ul class="no-bullets">
+          <li class="schrifft">&#9733; µC Systemprogrammierung in C, C++, Python</li>
+          <li class="schrifft">&#9733; SPS Siemens logo</li>
+
+        </ul>
+      </div>
+      <div class="col-4"><img class="card-img-fade-in-left" style="height: 250px;width: 300px" src="/img/ITE-logo.jpeg" alt="..." /></div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+<div style="margin-top: 150px"></div>
+<div  th:replace="fragments/footer.html::footer"></div>
+</html>

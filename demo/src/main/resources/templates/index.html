@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Deine Firma</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/img/ITE-logo.jpeg" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/01.css">
+</head>
+<div th:replace="fragments/header.html::header"></div>
+<body style="margin-top:325px; background-image: url('/img/hinterground1.jpg');">
+<div class="desktop-menu" th:replace="fragments/nav::nav"></div>
+<div style="background-color:white; width: 70%;height: 100%; display: flex; justify-content:center;align-items: center;max-width: 60%;min-width: 300px;margin:0 auto;  border-radius: 5px;">
+<main class="container px-lg-5" >
+    <!-- Modal für das Feedback-Formular -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content myStyle">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel" style="color: #BF8211;">Feedback geben</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/feedback-form" method="post">
+                        <div class="form-group">
+                            <label for="subject"  style="color: #BF8211;">Betreff</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"  style="color: #BF8211;">Nachricht</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn " style="margin-top: 10px; background-color: #BF8211;"><span style="color: #01261C;">Senden</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 25px;">
+        <div class="row">
+            <h3 class="text-dunkelGold" >Willkommen bei ITE Industrial Testing and Engineering</h3>
+            <p class="schrifft">Wir sind ein junges und flexibles Entwicklungsdienstleister-Team für QM, QS, Hardware- und System-Testing mit langjähriger Erfahrung aus dem automobilen Umfeld im In- und Ausland. Unsere Expertise ermöglicht es uns, Sie von der Planung bis zum Endprodukt professionell zu unterstützen und Ihre Herausforderungen anzugehen. Wir sprechen Ihre Sprache und bieten Ihnen folgende Alleinstellungsmerkmale:</p>
+            <div class="col-8">
+                <ul class="no-bullets">
+                    <li>&#9733; Zielorientierte und termingerechte Arbeitsweise</li>
+                    <li>&#9733; Sehr hohe Qualität unserer Dienstleistungen</li>
+                    <li>&#9733; Permanente Erreichbarkeit und schnelle Reaktionszeit auf Anfragen</li>
+                    <li>&#9733; Kompetenz und ständige Weiterbildung</li>
+                    <li>&#9733; Agiles Arbeiten zu einem fairen Preis</li>
+                    <li>&#9733; Flexibilität</li>
+                </ul></div>
+            <div class="col-4"><img class="card-img-fade-in-left animate__animated animate__fadeInLeft" style="height: 250px;width: 300px" src="/img/ITE-logo.jpeg" alt="..." /></div>
+        </div>
+        <div class="row">
+            <h3 class="text-dunkelGold">Über uns</h3>
+            <p class="schrifft">Wir sind ein agiles, junges und erfahrenes Ingenieur-Team, das sich stetig weiterentwickelt und verschiedene Dienstleistungen anbietet. Wir schätzen und wertschätzen unsere Arbeit und unsere Kunden und kümmern uns mit viel Engagement und Professionalität um jede Aufgabe. Unsere Erfahrungen umfassen:</p>
+            <div class="col-3">
+                <img class="card-img-fade-in-left animate__animated animate__fadeInLeft animate__delay-1s" style="height: 250px;width: 300px" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                </div>
+            <div class="col-9" style="margin-top: 20px">
+                <ul class="no-bullets">
+                    <li>&#9733; Erfahrungen seit mehr als 10 Jahren bei HELLA, einem erfolgreichem internationalen Automobilzulieferer in der Entwicklung von namhaften Produkten für große <strong>OEMs wie VW, AUDI, PORSCHE, SCANIA, MAN, DAIMLER, IVECO.</strong></li>
+                    <li>&#9733; Erfolgreiche Projekte im Bereich Smart Home bei der Firma Gira</li>
+                    <li>&#9733; Durchführung von mehreren Einsätzen im internationalen Umfeld, unter anderem in den USA, Malaysia, Slowenien, Bulgarien und Rumänien</li>
+                </ul>
+            </div>
+            <p class="schrifft" style="margin-top: 20px" >Sie können sich auf uns verlassen: Wir setzen uns zu 100% für Ihre Anliegen ein und finden stets die bestmögliche Lösung. Durch strategische Investitionen werden wir in Zukunft auch weitere Dienstleistungen anbieten können, wie zum Beispiel die Bestückung von Prototypen und Prüfmustern in Kooperation, 3D-Druck von mechanischen Teilen, Inhouse-Umwelt-Testing, Kalibrierung von Prüfständen, Equipment und Klimaschränken sowie Mitarbeiter- und Aufgabenwachstum.</p>
+            <p class="schrifft" >Wir sind sechs Tage pro Woche von 8 bis 18 Uhr erreichbar. Schreiben oder rufen Sie uns an, wir freuen uns auf Sie.</p>
+        </div>
+    </div>
+</main>
+</div>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<div th:replace="fragments/footer.html::footer"></div>
+</html>

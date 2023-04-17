@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row desktop-menu  " >
+  <aside class="container px-lg-5" >
+    <!-- ============= COMPONENT ============== -->
+    <nav class="sidebar card py-2 mb-4 fixed-top navi desktop-menu">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" > Dienstleisungen <b class="float-end">&raquo;</b> </a>
+          <ul class="submenu dropdown-menu">
+            <li><a class="nav-link" href="Auditierung">Auditierung </a></li>
+            <li><a class="nav-link" href="Akustik">Akustik </a>
+            <li><a class="nav-link" href="Beratung">Beratung </a></li>
+            <li><a class="nav-link" href="Engineering">Engineering </a></li>
+            <li><a class="nav-link" href="HuST">Hardware & System Testing</a></li>
+            <li><a class="nav-link" href="Programierung">Programierung </a></li>
+            <li><a class="nav-link" href="QuS">Qualitätsmanagement & Sicherung</a></li>
+            <li><a class="nav-link" href="SHuK">SmartHome & Kommunikation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  href="referenzen"> Referenzen  </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Kontakt"> Kontakt  </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="impressum"> Impressum  </a>
+        </li>
+        <!-- Button zum Öffnen des Feedback-Formulars -->
+        <li class="nav-item-feedback">
+          <button type="button" class="btn nav-item-feedback" style="width: 220px" data-toggle="modal" data-target="#feedbackModal">
+            <a style="font-size: 15px; font-weight: bold; color: #01261C;"> Feedback geben</a>
+
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <!-- ============= COMPONENT END// ============== -->
+  </aside>
+</div>
+<div class="row mobile-menu ">
+  <nav class="navbar navbar-expand-lg navbar-light  fixed-top myStyle mobile-menu">
+    <div class="container px-4 px-lg-5 ">
+      <img src="img/ITE-logo.jpeg" class="me-2" height="50">
+      <a style="color:#BF8211;" class="navbar-brand " href="index">ITEngineering</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item dropdown">
+            <a style="color:white" class="nav-link dropdown-toggle" id="navbarDropdown"  role="button" data-bs-toggle="dropdown" aria-expanded="false">Dienstleistung</a>
+            <ul class="dropdown-menu " style="background:#01261C " aria-labelledby="navbarDropdown">
+              <li><a style="color:#BF8211 " class="dropdown-item" href="Auditierung">Auditierung </a></li>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="Akustik">Akustik </a>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="Beratung">Beratung </a></li>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="Engineering">Engineering </a></li>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="HuST">Hardware & System Testing</a></li>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="Programierung">Programierung </a></li>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="QuS">Qualitätsmanagement & Sicherung</a></li>
+              <li><a style="color:#BF8211 " class="dropdown-item" href="SHuK">Smart Home & Kommunikation </a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a style="color:white" class="nav-link" href="Kontakt">Referenzen</a></li>
+          <li class="nav-item"><a style="color:white" class="nav-link" href="Kontakt">Kontakt</a></li>
+          <li class="nav-item"><a style="color:white" class="nav-link" href="impressum">Impressum</a></li>
+        </ul>
+        <div class="ml-auto">
+          <div class="btn-group">
+            <button type="button" class="btn feedBack"  data-toggle="modal" data-target="#feedbackModal">
+              <a style="font-size: 15px; font-weight: bold; color: #01261C;padding-right: 40px"> Feedback geben</a>
+              <b class="float-end" style="padding-right: 11px;color: #01261C;">&raquo;</b>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+</body>
+</html>

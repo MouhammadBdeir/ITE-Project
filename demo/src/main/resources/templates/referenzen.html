@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Deine Firma</title>
+    <!-- Favicon-->
+
+    <link rel="icon" type="image/x-icon" href="/img/ITE-logo.jpeg" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/01.css">
+</head>
+<div th:replace="fragments/header.html::header"></div>
+<body style="margin-top:320px;">
+<style>
+    body {
+        background-color: #BFBFBD; /* Replace with your desired color code */
+    }
+</style>
+<div class="desktop-menu" th:replace="fragments/nav::nav"></div>
+<main class="container px-lg-5">
+    <!-- Modal für das Feedback-Formular -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content myStyle">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel" style="color: #BF8211;">Feedback geben</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/feedback-form" method="post">
+                        <div class="form-group">
+                            <label for="subject"  style="color: #BF8211;">Betreff</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"  style="color: #BF8211;">Nachricht</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn " style="margin-top: 10px; background-color: #BF8211;"><span style="color: #01261C;">Senden</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  style="margin-top: 25px;">
+        <div class="row">
+            <h3 class="text-dunkelGold">Referenzen </h3>
+            <p class="schrifft">Wir sind ein junges, flexibles, Entwicklungsdienstleister Team für QM, QS,
+                Hardware- und System testing. Unsere Expertise zeigt langjährige Erfahrung aus
+                dem automobilen Umfeld im In- sowie Ausland. Wir nehmen uns die Zeit und
+                stellen uns der Herausforderung. Wir unterstützen sie von der ersten Planung bis
+                hin zum Endprodukt. Mit gutem Gefühl, wenn es heißt, professionelle Hilfe und in
+                allen Belangen. Wir sprechen ihre Sprache.
+                Alleinstellungsmerkmale:
+            <ul class="no-bullets">
+                <li><div>&#9733;<span>Erfahrungen seit mehr als 10 Jahren bei <span style="font-weight: bold">HELLA</span>, einem erfolgreichem internationalen Automobilzulieferer in der Entwicklung von namhaften Produkten für große  <span style="font-weight: bold">OEM´s wie VW, AUDI, PORSCHE, SCANIA, MAN, DAIMLER, IVECO.</span></span></div></li>
+                <li><div>&#9733;<span>Erfolgreiche Projekte im Bereich Smart Home bei der Firma  <span style="font-weight: bold">GIRA</span></span></div></li>
+                <li><div>&#9733;<span>Durchführung von mehreren Einsätzen im internationalen Umfeld (USA, Malaysia, Slowenien, Bulgarien, Rumänien).</span></div></li>
+            </ul>
+            </p>
+            <p class="schrifft" >Freuen uns auf jede Anfrage. Bitte nehmen Sie Kontakt mit uns auf.
+                Wir werden uns umgehend bei Ihnen melden.
+                Ihr ITE Industrial Testing and Engineering Team</p>
+            <div class="col-6" style="margin-top: 20px">
+                <h3 class="text-dunkelGold">Zertifikate:</h3>
+                <ul class="no-bullets">
+                    <li>&#9733;</span>TÜV Zertifikat in Auditierung gemäß ISO 9001</span></li>
+                    <li>&#9733;</span>TÜV Zertifikat als Six Sigma green Belt</span></li>
+                    <li>&#9733;</span>Python Master Kurs Zertifikat</span></li>
+                    <li>&#9733;</span>LMK5/LMK6 Kamera und LabSoft Zertifikat</span></li>
+                    <li>&#9733;</span>Zertifikat Ali für Bordnetz Prüfungen</span></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <img class="card-img-fade-in-left" style="height: 250px;width: 350px" src="/img/referenzenLogo.png" alt="..." />
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+<div  th:replace="fragments/footer.html::footer"></div>
+</html>

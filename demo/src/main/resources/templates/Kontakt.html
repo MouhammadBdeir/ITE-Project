@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Deine Firma</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/img/ITE-logo.jpeg" />
+    <!-- Bootstrap icons-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/01.css">
+</head>
+<style>
+    body {
+        background-color: #BFBFBD; /* Replace with your desired color code */
+    }
+</style>
+<!-- Header-->
+<div th:replace="fragments/header.html::header"></div>
+<body >
+<div class="desktop-menu" th:replace="fragments/nav::nav"></div>
+<section style="margin-top: 300px" class="pt-4">
+    <!-- Modal für das Feedback-Formular -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content myStyle">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel" style="color: #BF8211;">Feedback geben</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/feedback-form" method="post">
+                        <div class="form-group">
+                            <label for="subject"  style="color: #BF8211;">Betreff</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"  style="color: #BF8211;">Nachricht</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn " style="margin-top: 10px; background-color: #BF8211;"><span style="color: #01261C;">Senden</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-xl px-4 mt-4">
+        <hr class="mt-0 mb-4">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class=" text-center">
+                    <h3 style="color: #01261C">Kontakt uns</h3>
+                </div>
+                <div class="text-center mt-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.471298222751!2d7.434618115844779!3d51.49725067963494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sEmil-Figge-Straße+30%2C+44227+Dortmund!2sDortmund!5e0!3m2!1sen!2sde!4v1647974174111!5m2!1sen!2sde" width="100%" height="380" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+                <hr class="mt-0 mb-4">
+                <div class="d-flex justify-content-center">
+                    <div class="col-lg-8 mb-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker"></span>
+                                    </div>
+                                    <div class="text">
+                                        <span class="fa fa-map-marker"></span>
+                                        <p style="color: #01261C"><span style="color: #A6600A">Address:</span><br>
+                                            198 West 21th Street, Suite 721 New York NY 10016</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-phone"></span>
+                                    </div>
+                                    <div class="text">
+                                        <span class="glyphicon glyphicon-earphone"></span>
+                                        <p ><span style="color: #A6600A">Rufnummer & WhatsApp</span> <br>
+                                            <a style="color: #01261C" href="tel://1234567920">+ 1235 2355 98</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                        <i class="bi bi-collection-fill"></i>
+                                        <p><span style="color: #A6600A">Email:</span> <a style="color: #01261C" href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                        <i class="bi bi-collection-fill"></i>
+                                        <p><span style="color: #A6600A">Xing :</span><br> <a style="color: #01261C" href="Xing@Xing.com">xxxxx</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                        <i class="bi bi-collection-fill"></i>
+                                        <p><span style="color: #A6600A">LinkedIn:</span><br> <a style="color: #01261C" href="LinkedIn@LinkedIn.com">xxxxxx</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-paper-plane"></span>
+                                    </div>
+                                    <div class="text">
+                                        <i class="bi bi-collection-fill"></i>
+                                        <p><span style="color: #A6600A">Facebook:</span><br><a style="color: #01261C" href="link.com">facbookXXX</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-4">
+                <!-- Profile picture card-->
+
+                <div class=" text-center">
+                    <h3 style="color: #01261C">Kontaktformular</h3>
+                </div>
+                <div th:if="${successMessage}" class="alert alert-success" role="alert">
+                    <span th:text="${successMessage}"></span>
+                </div>
+                <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+                    <span th:text="${errorMessage}"></span>
+                </div>
+                <br>
+                <div class="col-lg-30 mx-auto">
+                    <div class="card mt-2 mx-auto p-4 myStyle">
+                        <form th:action="@{/submit-form}" method="post" enctype="multipart/form-data" >
+                            <div class="card-body myStyle">
+                                <div class = "container">
+                                    <form id="contact-form" role="form">
+                                        <div class="controls">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label for="form_salutation" class="text-gold">Anrede*</label>
+                                                    <select id="form_salutation"  name="anrede" class="form-control  " required="required" data-error="Anrede.">
+                                                        <option class="text" value="" selected disabled>*</option>
+                                                        <option class="text" >Herr</option>
+                                                        <option class="text" >Frau</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_Firstname" class="text-gold" >Firstname *</label>
+                                                        <input id="form_Firstname" type="text" name="firstName" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_lastname" class="text-gold">Lastname *</label>
+                                                        <input id="form_lastname" type="text"  name="lastName" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_email" class="text-gold">Email *</label>
+                                                        <input id="form_email" type="email"  name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_firma" class="text-gold">Firma *</label>
+                                                        <input id="form_firma" type="text"  name="company" class="form-control" placeholder="Firma*" required="required" data-error="Firma is required.">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_need" class="text-gold">Please specify your need </label>
+                                                        <select id="form_need" name="interest"  class="form-control"  data-error="Please specify your need.">
+                                                            <option value="" selected disabled>--Ich interessiere mich for--</option>
+                                                            <option >Umasatz</option>
+                                                            <option >Nebenberufliche tätigkeit</option>
+                                                            <option >Sonstiges</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="form_telefon" class="text-gold" >Telefon *</label>
+                                                        <input id="form_telefon" type="number" name="phoneNumber" class="form-control" placeholder="Telefon eingeben" required="required" data-error="telefon is required.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="form_message" class="text-gold">Fragen / Wünsche </label>
+                                                        <textarea id="form_message"  name="message" class="form-control" placeholder="Fragen / Wünsche" rows="4"  data-error="Please, leave us a message."></textarea
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <p class="text-white">Ich benötige Ihr Einverstanändnis zur Datenspeicherung gemaß meiner
+                                                    <a href="url" class="text-white">Datenschutzerklärung</a>
+                                                    <!-- Default unchecked -->
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox"  class="custom-control-input" id="defaultUnchecked"  required="required">
+                                                    <label class="custom-control-label text-white" for="defaultUnchecked">Ja, ich bin einverstanden</label>
+                                                </div>
+                                                </p>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12"  >
+                                                    <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
+                                                      " value="Anfrage absenden" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-0 mb-4">
+    </div>
+    </div>
+
+</section>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+<div  th:replace="fragments/footer.html::footer"></div>
+</html>
