@@ -144,16 +144,16 @@
                 <div class=" text-center">
                     <h3 style="color: #01261C">Kontaktformular</h3>
                 </div>
-                <div th:if="${successMessage}" class="alert alert-success" role="alert">
-                    <span th:text="${successMessage}"></span>
+                <div  class="alert alert-success" role="alert">
+                    <span ></span>
                 </div>
-                <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
-                    <span th:text="${errorMessage}"></span>
+                <div  class="alert alert-danger" role="alert">
+                    <span ></span>
                 </div>
                 <br>
                 <div class="col-lg-30 mx-auto">
                     <div class="card mt-2 mx-auto p-4 myStyle">
-                        <form th:action="@{/submit-form}" method="post" enctype="multipart/form-data" >
+                        <form  method="post" enctype="multipart/form-data" >
                             <div class="card-body myStyle">
                                 <div class = "container">
                                     <form id="contact-form" role="form">
