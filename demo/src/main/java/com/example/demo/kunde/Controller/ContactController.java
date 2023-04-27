@@ -1,20 +1,31 @@
 package com.example.demo.kunde.Controller;
 
+import com.example.demo.kunde.service.CustomerService;
+import com.example.demo.kunde.service.FeedbackService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 @Controller
 
     @RequestMapping("/")
     public class ContactController {
+    @Autowired
+    private JavaMailSender mailSender;
 
     @GetMapping("/index")
     public String showForm(Model model) {
         System.out.println("showForm sucess ");
         return "index";
+    }
+    @GetMapping("/projects")
+    public String showProjects(Model model) {
+        System.out.println("showProjects sucess ");
+        return "Projekte";
     }
     @GetMapping("/QuS")
     public String showQuS(Model model) {

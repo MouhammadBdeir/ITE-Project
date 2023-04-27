@@ -17,5 +17,8 @@ import java.net.URISyntaxException;
 @RequestMapping("/api")
 public class UserController {
 
+    @Autowired
+    private UserService userService;
+
 
 }
