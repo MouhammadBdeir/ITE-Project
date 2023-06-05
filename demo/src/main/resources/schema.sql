@@ -28,3 +28,15 @@ create table IF NOT EXISTS Comment(
     updated_on timestamp,
     foreign key (post) references Post(id)
 );
+-- comment
+create table IF NOT EXISTS customer(
+    id serial primary key,
+    firstName varchar(100) not null,
+    lastName varchar(100) not null,
+    interest varchar(100) not null,
+    company varchar(100) not null,
+    anrede varchar(100) not null,
+    email varchar(255) not null,
+    phoneNumber number not null,
+    message text not null,
+    );
